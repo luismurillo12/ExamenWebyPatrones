@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+
+    </head>
+    <body>
+        <h1>Nuevo Concierto</h1>
+        <!-- comment <a th:href="@{/}"></a>-->
+        <br>
+
+        <form th:action="@{/save}" method="post" th:object="${concierto}">
+            <label for="artista"> Artista: </label>
+            <input type="text" name="artista" th:field="*{artista}">
+            <br>
+            <label for="costo"> Costo: </label>
+            <input type="text" name="costo" th:field="*{costo}">
+            <br>
+            <label for="capacidad"> Capacidad: </label>
+            <input type="text" name="capacidad" th:field="*{capacidad}">
+            <br>
+            <label for="lugar"> Lugar: </label>
+            <input type="text" name="lugar" th:field="*{lugar}">
+            <br>
+            <label for="fecha"> Fecha: </label>
+            <input type="text" name="fecha" th:field="*{fecha}">
+            <button type="submit" value="Guardar"> Guardar Concierto</button>
+        </form>
+    </body>
+</html>
